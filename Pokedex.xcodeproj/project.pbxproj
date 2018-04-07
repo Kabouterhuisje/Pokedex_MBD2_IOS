@@ -13,6 +13,7 @@
 		E8AF1D9920790A1600304EE3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AF1D9720790A1600304EE3 /* Main.storyboard */; };
 		E8AF1D9B20790A1600304EE3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8AF1D9A20790A1600304EE3 /* Assets.xcassets */; };
 		E8AF1D9E20790A1600304EE3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8AF1D9C20790A1600304EE3 /* LaunchScreen.storyboard */; };
+		E8AF1DA6207928AC00304EE3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF1DA5207928AC00304EE3 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E8AF1D9A20790A1600304EE3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E8AF1D9D20790A1600304EE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8AF1D9F20790A1600304EE3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8AF1DA5207928AC00304EE3 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				E8AF1D9120790A1600304EE3 /* AppDelegate.swift */,
 				E8AF1D9320790A1600304EE3 /* FirstViewController.swift */,
+				E8AF1DA5207928AC00304EE3 /* DetailsViewController.swift */,
 				E8AF1D9520790A1600304EE3 /* SecondViewController.swift */,
 				E8AF1D9720790A1600304EE3 /* Main.storyboard */,
 				E8AF1D9A20790A1600304EE3 /* Assets.xcassets */,
@@ -142,6 +145,7 @@
 				E8AF1D9620790A1600304EE3 /* SecondViewController.swift in Sources */,
 				E8AF1D9220790A1600304EE3 /* AppDelegate.swift in Sources */,
 				E8AF1D9420790A1600304EE3 /* FirstViewController.swift in Sources */,
+				E8AF1DA6207928AC00304EE3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
