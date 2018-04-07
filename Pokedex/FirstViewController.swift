@@ -11,7 +11,7 @@ import UIKit
 class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tvPokemons: UITableView!
-    let list = ["Franje", "Sjors", "Piet", "Superfrans"]
+    
     var pokemonNames = [String]()
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (pokemonNames.count)
@@ -38,10 +38,6 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     self.pokemonNames.append(name)
                 }
                 
-                
-                
-                print(self.pokemonNames)
-                
                 DispatchQueue.main.async {
                     self.tvPokemons.reloadData()
                 }
@@ -52,7 +48,15 @@ class FirstViewController: UIViewController, UITableViewDelegate, UITableViewDat
         task.resume()
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            destination.pokemonName = pokemonNames[(tvPokemons.indexPathForSelectedRow?.row)!]
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
