@@ -33,7 +33,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         viewLoadSetup()
-        print("Superfrans")
     }
     
     
@@ -45,7 +44,6 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
         }
         DispatchQueue.main.async{
             self.tvFavorites.reloadData()
-            print("Superfrans123")
         }
     }
 
