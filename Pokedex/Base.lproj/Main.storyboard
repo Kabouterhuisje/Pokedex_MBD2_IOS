@@ -83,6 +83,7 @@
                         <viewLayoutGuide key="safeArea" id="5dF-yD-KBZ"/>
                     </view>
                     <connections>
+                        <outlet property="btnFavorite" destination="hK1-d7-go2" id="ypa-iG-BTa"/>
                         <outlet property="lblHeight" destination="Apg-ch-qnb" id="ZNI-xL-spk"/>
                         <outlet property="lblPokemonName" destination="Xuq-tV-Nnr" id="bo1-33-ZTM"/>
                         <outlet property="lblWeight" destination="N9K-uk-Yjn" id="7FQ-cs-7Z8"/>

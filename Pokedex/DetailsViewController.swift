@@ -18,6 +18,7 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var lblPokemonName: UILabel!
     @IBOutlet weak var lblHeight: UILabel!
     @IBOutlet weak var lblWeight: UILabel!
+    @IBOutlet weak var btnFavorite: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,16 @@ class DetailsViewController: UIViewController {
             }
         }
         task.resume()
+        
+        let defaults = UserDefaults.standard
+        if let stringOne = defaults.array(forKey: defaultsKeys.pkName) {
+            for favoritePokemon in stringOne {
+                if favoritePokemon as? String == pokemonName {
+                    btnFavorite.isHidden = true
+                }
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
