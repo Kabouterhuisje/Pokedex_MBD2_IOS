@@ -46,6 +46,16 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
             self.tvFavorites.reloadData()
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController {
+            destination.pokemonName = favoriteList[(tvFavorites.indexPathForSelectedRow?.row)!]
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
