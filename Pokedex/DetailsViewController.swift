@@ -69,6 +69,7 @@ class DetailsViewController: UIViewController {
         if let stringOne = defaults.array(forKey: defaultsKeys.pkName) {
             for favoritePokemon in stringOne {
                 favoritePokemons.append(favoritePokemon as! String)
+                btnFavorite.isHidden = true
             }
     
         }
