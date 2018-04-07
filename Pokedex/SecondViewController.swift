@@ -27,17 +27,26 @@ class SecondViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewLoadSetup()
+        print("Superfrans")
+    }
+    
+    
+    func viewLoadSetup(){
         let defaults = UserDefaults.standard
         
         if let stringOne = defaults.array(forKey: defaultsKeys.pkName) {
             favoriteList = stringOne as! [String]
-            
-            DispatchQueue.main.async{
-                self.tvFavorites.reloadData()
-            }
         }
-        
-        
+        DispatchQueue.main.async{
+            self.tvFavorites.reloadData()
+            print("Superfrans123")
+        }
     }
 
     override func didReceiveMemoryWarning() {
